@@ -1,0 +1,55 @@
+k,method,seed,train,test
+5,Top-K by market cap,,0.148328,0.112780
+5,Simulated annealing,0.000000,0.061758,0.101059
+5,Simulated annealing,1.000000,0.066182,0.120934
+5,Simulated annealing,2.000000,0.059639,0.114213
+5,Simulated annealing,3.000000,0.058620,0.111743
+5,Simulated annealing,4.000000,0.061501,0.123653
+10,Top-K by market cap,,0.132013,0.096825
+10,Simulated annealing,0.000000,0.043513,0.071772
+10,Simulated annealing,1.000000,0.040909,0.076314
+10,Simulated annealing,2.000000,0.039709,0.077328
+10,Simulated annealing,3.000000,0.038641,0.074598
+10,Simulated annealing,4.000000,0.037614,0.058215
+15,Top-K by market cap,,0.113036,0.085769
+15,Simulated annealing,0.000000,0.031118,0.062248
+15,Simulated annealing,1.000000,0.031644,0.052899
+15,Simulated annealing,2.000000,0.031028,0.052314
+15,Simulated annealing,3.000000,0.035423,0.057550
+15,Simulated annealing,4.000000,0.029341,0.052100
+20,Top-K by market cap,,0.096873,0.074243
+20,Simulated annealing,0.000000,0.027119,0.046591
+20,Simulated annealing,1.000000,0.025370,0.043997
+20,Simulated annealing,2.000000,0.026992,0.043013
+20,Simulated annealing,3.000000,0.025988,0.037436
+20,Simulated annealing,4.000000,0.025883,0.046033
+30,Top-K by market cap,,0.080291,0.064457
+30,Simulated annealing,0.000000,0.021732,0.053910
+30,Simulated annealing,1.000000,0.020370,0.044754
+30,Simulated annealing,2.000000,0.022844,0.039858
+30,Simulated annealing,3.000000,0.022029,0.043868
+30,Simulated annealing,4.000000,0.020993,0.034637
+40,Top-K by market cap,,0.072458,0.057231
+40,Simulated annealing,0.000000,0.017827,0.036107
+40,Simulated annealing,1.000000,0.017781,0.034400
+40,Simulated annealing,2.000000,0.018022,0.038442
+40,Simulated annealing,3.000000,0.017308,0.035431
+40,Simulated annealing,4.000000,0.019000,0.044654
+60,Top-K by market cap,,0.062363,0.048113
+60,Simulated annealing,0.000000,0.014780,0.029475
+60,Simulated annealing,1.000000,0.015045,0.041932
+60,Simulated annealing,2.000000,0.014634,0.029822
+60,Simulated annealing,3.000000,0.014759,0.036894
+60,Simulated annealing,4.000000,0.014228,0.034884
+80,Top-K by market cap,,0.054145,0.036955
+80,Simulated annealing,0.000000,0.013301,0.027044
+80,Simulated annealing,1.000000,0.013905,0.035868
+80,Simulated annealing,2.000000,0.012862,0.027769
+80,Simulated annealing,3.000000,0.012464,0.028750
+80,Simulated annealing,4.000000,0.013158,0.027760
+100,Top-K by market cap,,0.052309,0.033670
+100,Simulated annealing,0.000000,0.012072,0.028727
+100,Simulated annealing,1.000000,0.012731,0.031025
+100,Simulated annealing,2.000000,0.013021,0.026371
+100,Simulated annealing,3.000000,0.012131,0.028316
+100,Simulated annealing,4.000000,0.012037,0.031037
