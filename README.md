@@ -1,8 +1,8 @@
-# Poor Man's ETF
+# Spyglass
 
 **Track the S&P 500 with 20 stocks instead of 500, picking them by simulated annealing.**
 
-[![CI](https://github.com/ethanldfoster/poor-mans-etf/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanldfoster/poor-mans-etf/actions/workflows/ci.yml)
+[![CI](https://github.com/ethanldfoster/spyglass/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanldfoster/spyglass/actions/workflows/ci.yml)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)
 
@@ -86,11 +86,11 @@ benchmark covariances as $s$, with $U^\top y = s$. The objective is then
 $\lVert Uw - y \rVert^2$ plus a constant, which makes this a **non-negative least-squares**
 problem. The budget constraint enters as a heavily weighted extra row. SciPy's NNLS solves
 it to the same optimum as SLSQP, about 40× faster
-([`tracking.py`](src/poor_mans_etf/tracking.py)).
+([`tracking.py`](src/spyglass/tracking.py)).
 
 ### Outer problem: simulated annealing over baskets
 
-([`annealing.py`](src/poor_mans_etf/annealing.py))
+([`annealing.py`](src/spyglass/annealing.py))
 
 | | |
 | --- | --- |
@@ -106,7 +106,7 @@ takes about 3 seconds.
 
 ### Data and evaluation
 
-([`data.py`](src/poor_mans_etf/data.py), [`backtest.py`](src/poor_mans_etf/backtest.py))
+([`data.py`](src/spyglass/data.py), [`backtest.py`](src/spyglass/backtest.py))
 
 - Daily adjusted closes for the S&P 500 constituents and SPY, from Yahoo Finance, are cached
   in `data/` so results reproduce without network access.
@@ -120,12 +120,12 @@ takes about 3 seconds.
 ## Quickstart
 
 ```bash
-git clone https://github.com/ethanldfoster/poor-mans-etf.git
-cd poor-mans-etf
+git clone https://github.com/ethanldfoster/spyglass.git
+cd spyglass
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 
-poor-mans-etf run                    # optimise a 20-stock portfolio and compare with the naive one
+spyglass run                    # optimise a 20-stock portfolio and compare with the naive one
 ```
 
 ```text
@@ -150,26 +150,26 @@ Holdings (20 stocks):
 Other commands:
 
 ```bash
-poor-mans-etf run --k 30 --seed 1                 # a different basket size or seed
-poor-mans-etf run --k auto --holding-cost 0.001   # let the size float: each stock must earn 0.1pp of TE
-poor-mans-etf frontier                            # tracking error against basket size (5 seeds per K)
-poor-mans-etf animate                             # render the GIF
-poor-mans-etf figures                             # regenerate everything in assets/
-poor-mans-etf fetch                               # re-download data from Yahoo Finance
+spyglass run --k 30 --seed 1                 # a different basket size or seed
+spyglass run --k auto --holding-cost 0.001   # let the size float: each stock must earn 0.1pp of TE
+spyglass frontier                            # tracking error against basket size (5 seeds per K)
+spyglass animate                             # render the GIF
+spyglass figures                             # regenerate everything in assets/
+spyglass fetch                               # re-download data from Yahoo Finance
 pytest                                            # tests
 ```
 
 ## Project layout
 
 ```text
-src/poor_mans_etf/
+src/spyglass/
   data.py        constituents, Yahoo Finance download, cache, cleaning
   tracking.py    tracking-error maths and the NNLS weight optimiser
   annealing.py   simulated annealing over baskets
   backtest.py    train/test split, buy-and-hold evaluation, frontier
   plots.py       static figures (light and dark themes)
   animate.py     the GIF
-  cli.py         the poor-mans-etf command
+  cli.py         the spyglass command
 notebooks/walkthrough.ipynb   step-by-step explanation with outputs
 data/                         cached prices and share counts
 assets/                       figures used in this README

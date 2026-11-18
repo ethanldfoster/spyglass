@@ -3,8 +3,8 @@ from itertools import combinations
 import numpy as np
 import pytest
 
-from poor_mans_etf.annealing import SelectionScorer, anneal, propose_move
-from poor_mans_etf.tracking import augmented_covariance
+from spyglass.annealing import SelectionScorer, anneal, propose_move
+from spyglass.tracking import augmented_covariance
 
 
 @pytest.fixture

@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from poor_mans_etf.backtest import Backtest, portfolio_returns, tracking_error
-from poor_mans_etf.data import load_universe, to_yahoo_ticker
+from spyglass.backtest import Backtest, portfolio_returns, tracking_error
+from spyglass.data import load_universe, to_yahoo_ticker
 
 
 @pytest.fixture(scope="module")

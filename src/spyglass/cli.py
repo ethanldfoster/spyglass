@@ -1,4 +1,4 @@
-"""Command line interface: ``poor-mans-etf {fetch,run,frontier,animate,figures}``."""
+"""Command line interface: ``spyglass {fetch,run,frontier,animate,figures}``."""
 
 from __future__ import annotations
 
@@ -129,7 +129,7 @@ def cmd_figures(args) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="poor-mans-etf",
+        prog="spyglass",
         description="Track SPY with a handful of S&P 500 stocks, picked by simulated annealing.",
     )
     parser.add_argument("-v", "--verbose", action="store_true", help="show data-cleaning logs")

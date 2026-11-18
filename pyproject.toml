@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "poor-mans-etf"
+name = "spyglass"
 version = "0.1.0"
 description = "Track the S&P 500 with a handful of stocks, picked by simulated annealing."
 readme = "README.md"
@@ -24,7 +24,7 @@ dependencies = [
 dev = ["pytest>=8", "ruff>=0.6", "ipykernel", "nbformat", "nbconvert"]
 
 [project.scripts]
-poor-mans-etf = "poor_mans_etf.cli:main"
+spyglass = "spyglass.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

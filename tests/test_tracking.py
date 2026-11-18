@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.optimize import minimize
 
-from poor_mans_etf.tracking import (
+from spyglass.tracking import (
     annualise,
     augmented_covariance,
     optimal_weights,
